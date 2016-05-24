@@ -1,0 +1,323 @@
+@charset "utf-8";
+
+/* ----------------------------------------------
+ * HanbitSoft Service Development Team
+ * 뉴오디션 잉글리시 사이트 팝업 Stylesheet
+ * Author - artsohee@hanbitsoft.co.kr 20150812
+------------------------------------------------- */
+
+/* CSS Reset
+-------------------------------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, img, strong, small, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, figure, figcaption{margin:0; padding:0; font-size:100%;}
+img, fieldset, button{border:0;}
+img {vertical-align: middle;}
+article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}
+body, input, button, textarea, select, table, kbd{line-height:1.2; letter-spacing: -1px;font-family:'Malgun Gothic','맑은 고딕','돋움',dotum,Helvetica,sans-serif; font-size:14px; color:#333;}
+body {background: #ffffff;}
+ol, ul{list-style:none;}
+a{text-decoration:none; color:#333;cursor: pointer;letter-spacing: -1px;}
+a:hover {text-decoration: underline;}
+button, label{cursor:pointer;}
+button::-moz-focus-inner, input::-moz-focus-inner{padding:0; border:0;}
+table{table-layout:fixed;border-collapse:collapse; border-spacing:0;}
+caption, legend{width:0; height:0; font-size:0; line-height:0; text-indent:-9999px; visibility:hidden;}
+input[type="checkbox"] {margin:0 4px 3px 2px;padding:0;width:13px;height:13px;vertical-align: middle;}
+input[type="submit"] {cursor: pointer;font-weight: bold;font-size: 14px;color: #fff;border: none;}
+h1, h2, h3, h4, h5, h6, div, p, strong, span, input, a, button {letter-spacing:-1px;}
+th, td {word-break: break-all; word-wrap: break-word;}
+/* Reserved Class
+-------------------------------------------------------------- */
+.irPm{display:block; overflow:hidden; font-size:0px; line-height:0; text-indent:-9999px;}
+.irWa{display:block; overflow:hidden; position:relative; width:100%; height:100%; z-index:-1;}
+.blind{width:1px; height:1px; font-size:0; line-height:0; position:absolute; top:0; left:-1000%; overflow:hidden;}
+.show{display:block;}
+.hide{display:none;}
+.fL{float:left;}
+.fR{float:right;}
+.clear {clear: both;}
+.clearFix{zoom:1;}
+.clearFix:after{clear:both; display:block; content:'';}
+.ellipsis {display: inline-block !important;overflow: hidden;vertical-align: middle;white-space: nowrap;text-overflow: ellipsis;-o-text-overflow: ellipsis}
+.tL {text-align: left !important;}
+.tR {text-align: right !important;}
+.tC {text-align: center !important;}
+.vM {vertical-align: middle !important;}
+.pointC {color: #f54547 !important;}
+#soundmanager-debug {display:none !important;}
+#footer {margin-top:90px; background:#eceded;}
+#footer .footer {width:1200px;}
+#footer ul li a strong {color:#333;}
+
+
+/* Styles
+-------------------------------------------------------------- */
+/* S : 공통 스타일 */
+.btn_area {text-align:center;}
+.btn,
+.link_area a {display:block; background:url(../images/common/spr_btn.png) no-repeat; text-indent:-9999px;}
+.btn.register {width:140px; height:46px; background-position:0 -126px;}
+.btn.cancel {width:110px; height:46px; background-position:0 -181px;}
+.btn.cancel2{width:140px; height:46px; background-position:-110px -679px;}
+.btn.payment {width:110px; height:46px; background-position:0 -318px;}
+.btn.study_down {width:210px; height:52px; background-position:-160px -450px;}
+.btn.payment_detail {width:210px; height:52px; background-position:-160px -512px;}
+.btn.guardian_confirm {width:310px; height:42px; background-position:0 -630px;}
+.btn.guardian_clear {width:140px; height:46px; background-position:-160px -574px;}
+.btn.close {width:210px; height:52px; background-position:-701px -240px;}
+.btn.down {width:140px; height:46px; background-position:-701px -302px;}
+#wrap {position: relative;margin:0; width:520px;}
+header h1.title {font-size:32px; color:#fff; text-align:center;}
+header {padding:20px 0; background:#0754ac; border-bottom:5px solid #043264;}
+.txt_blue {color:#0754ac;}
+.txt_red {color:#ef6161;}
+.txt_bold{font-weight:bold;}
+#container {padding:35px 40px 30px 40px;}
+.top_con {padding-bottom:10px; }
+.top_con .desc {font-size:20px; font-weight:bold;}
+.top_con dt,
+.top_con dd{float:left;}
+.top_con .group_dl {float:right}
+.top_con .group_dl dl {font-size:22px; font-weight:bold;}
+.top_con .group_dl dd,
+.top_con .group_dl dt {padding-left:5px;}
+.top_con dt {font-size:20px; font-weight:bold;}
+.middle_con {padding:27px 0 17px 0; border-top:1px solid #043264; border-bottom:1px solid #043264;}
+.middle_con dl dt {margin-bottom:10px; padding:12px 0 0 7px; float:left; width:120px; height:28px; color:#666; background:url(../images/common/ico_dot_blue.gif) no-repeat left 19px;}
+.middle_con dl.box_type dd{position:relative; margin-bottom:10px; padding:0 10px; float:right; width:288px; height:40px; line-height:38px; border:1px solid #d2d2d2;letter-spacing:0}
+.middle_con dl.box_type dd.bor_none{height:42px;width:308px;padding:0;border:none;}
+.middle_con dl.box_type .bor_none.txt_bold{font-size:16px;color:#333333;}
+
+.middle_con dl.box_type .select_area {border:0;}
+.btn_calender {position:absolute; right:10px; top:10px; display:block; width:21px; height:21px; background:url(../images/common/btn_calender.png) no-repeat; text-indent:-9999px;}
+.middle_con dl dd.total_num{font-weight:bold;text-align:left;font-size:16px;color:#666666}
+.middle_con dl dd.total_num span{padding-right:5px;font-weight:bold;}
+#footer {margin:20px 0 0 0; padding:12px 20px 16px 20px;}
+#footer h2 {padding-bottom:5px; font-size:16px;}
+#footer li {padding:4px 0 0 7px; background:url(../images/common/ico_dot_blue.gif) no-repeat left 13px; font-size:12px; color:#666;line-height:18px;}
+.btn_area .btn {float:left;}
+.style_dot {padding-top:14px;}
+.style_dot li {padding:0 0 8px 7px; background:url(../images/common/ico_dot_gray.gif) no-repeat left 8px; font-size:12px;}
+.radio_area {margin:12px 0 0 0; float:left; }
+.radio_area li {width:118px; float:left;}
+.radio_area li input {margin:3px 3px 0 0; float:left; width:13px; height:13px;}
+.radio_area li label {float:left;}
+.btn_area {margin:20px auto 0 auto; }
+#pop th,
+#pop td {height:74px; border-top:1px solid #cecece;}
+#pop th {padding-left:7px; background:url(../images/common/ico_dot_blue.gif) no-repeat left 40px; text-align:left;}
+#pop .fir th,
+#pop .fir td {border:0;}
+#pop .error {display:block; height:15px; margin-left:7px; padding-left:17px; background:url(../images/common/spr_vali.png) no-repeat; color:#ef6161; line-height:13px; font-size:11px; font-weight:bold;}
+#pop .correct {display:block; height:15px; margin-left:7px; padding-left:21px; background:url(../images/common/spr_vali.png) no-repeat 0 -25px; color:#5098eb; line-height:13px; font-size:11px; font-weight:bold;}
+/* E : 공통 스타일 */
+
+/* S : 커스텀 셀렉트 */
+.custom_select{width:98px; height:32px; background:#fff; border:1px solid #d0d4e3; position:relative;}
+.custom_select .txt{width:100%; height:100%; line-height:28px; background:url(../images/common/ico_select_arrow.png) 80px 50% no-repeat; text-indent:10px; position:absolute; left:0; top:0; _display:none; color:#666;}
+.custom_select select{width:100%; height:100%; cursor:pointer; position:relative; opacity:0; filter:alpha(opacity=0);}
+/* E : 커스텀 셀렉트 */
+
+/* S : popup - 휴강신청 */
+.canceled .date_select .custom_select{float:left;width:72px;}
+
+.canceled .date_select .custom_select .txt{background-position:86% 50%;}
+.canceled .custom_select + span{float:left;margin:0 14px 0 5px;}
+.canceled .custom_select.day + span{margin-right:0}
+
+.canceled .btn_area {width:260px;}
+.canceled .cancel2,
+.canceled .register {margin-right:10px;}
+/* E : popup - 휴강신청 */
+
+/* S : popup - 수강연장 */
+.custom_select {width:100%; height:42px;}
+.custom_select .txt {line-height:40px; background-position:266px 50%;}
+.extension .btn_area {width:110px;}
+
+/* E : popup - 수강연장 */
+
+/* S : popup - 거래명세서 */
+#wrap.transaction {width:800px;}
+.transaction .top_con {border-bottom:2px solid #043264;}
+.transaction table tr {}
+.transaction table th {height:40px;  background:#f0f0f0; font-weight:normal; border:1px solid #d1d1d1; font-size:12px;}
+.transaction table td {padding-left:10px; font-size:12px;border:1px solid #d1d1d1;}
+.transaction .trader_info {margin-right:20px; width:240px;}
+.transaction .trader_info th {padding-left:10px; text-align:left; border-left:0;}
+.transaction .trader_info td {font-weight:bold; border-right:0;}
+.transaction .provider_info {width:460px; border:1px solid #d1d1d1;}
+.transaction .provider_info .title {line-height:30px;}
+.transaction .btm_con {padding-top:20px;}
+.transaction .btm_con dl {padding-bottom:20px;}
+.transaction .btm_con dl dt {float:left; font-weight:bold;}
+.transaction .btm_con dl dd {float:left;}
+.transaction .btm_con .type_str {margin-right:15px; text-align:right;}
+.transaction .btm_con .type_str strong {padding:0 10px;}
+.transaction .btm_con .type_num span {padding:0 0 0 12px; font-size:16px;font-weight:bold;}
+.transaction .btm_con .type_num strong {padding:0 10px;}
+.transaction .btm_con .txt_blue {font-size:16px;}
+.transaction .detail_info {width:720px; border:1px solid #d1d1d1; border-top:1px solid #043264;}
+.transaction .detail_area {border-top:1px solid #043264;}
+.transaction .detail_info th {border-top:0;}
+.transaction .detail_info td {padding:0; height:40px; border:1px solid #d1d1d1; text-align:center;}
+.transaction .style_dot {padding-top:10px; font-size:12px;}
+#pop .transaction th,
+#pop .transaction td {height:40px; }
+#pop .transaction th {text-align:center; padding:0; background:#f0f0f0;}
+.transaction .btn_wrap{margin-top:30px;text-align:center;}
+.transaction .btn_wrap button{display:inline-block;width:110px;height:46px;}
+.transaction .btn_wrap .btn.print{margin-right:10px;background-position:-703px -452px;}
+.transaction .btn_wrap .btn.close{background-position:-835px -452px;}
+
+/* E : popup - 거래명세서 */
+
+/* S : popup - 결제하기 */
+#wrap.payment {width:700px;}
+.payment .top_con {position:relative;}
+.payment .top_con dt,
+.payment .top_con dd {float:none;}
+.payment .top_con dt {padding-bottom:5px;}
+.payment .top_con dd {color:#666;}
+.payment .top_con .group_dl {position:absolute; right:0; top:15px; color:#333;}
+.payment .top_con .group_dl p {font-size:26px;}
+.payment .middle_con {border-top-width:2px;}
+.payment dl.box_type .inner {float:left;}
+.payment dl.box_type dd {padding:0; float:left; width:470px; border:0;}
+.payment .btn_area {width:210px;}
+.payment .btn.payment {width:210px; height:52px; background-position:-160px -342px;}
+.payment .speech_bubble {padding:14px 0; margin-top:20px; position:relative; background:#f5f5f5; border:1px solid #e6e6e6;}
+.payment .speech_bubble .inner {padding-left:20px; font-size:13px; color:#666;}
+.payment .speech_bubble .ico {position:absolute; left:33px; top:-9px; width:15px; height:9px; background:url(../images/common/ico_speech_bubble.png) no-repeat;}
+.payment .input_area input {height:34px; line-height:32px; color:#666; border:1px solid #d2d2d2;}
+.payment .point {border-bottom:1px solid #cecece;}
+.payment .point .input_area {height:auto;}
+.payment .point .input_area .desc {padding-bottom:5px;}
+.payment .point .input_area input {margin-right:10px; float:left; padding:0 10px; width:110px; }
+.payment .point .input_area button {margin-right:10px; float:left; width:70px; height:36px; background-position:-160px -404px;}
+.payment .point .input_area .show_point {float:left; color:#666;}
+.payment .point .input_area .desc {line-height:14px; color:#666666; font-size:12px;}
+.payment .custom_select {width:290px; border:1px solid #d2d2d2;}
+.payment .result {float:right; color:#ef6161;}
+.payment .btm_con {padding-top:20px;}
+.payment dl.sum {padding-bottom:20px; float:right;}
+.payment .sum dt {padding-top:5px; margin-right:20px; float:left; color:#666; font-size:16px;}
+.payment .sum dd {float:right; font-size:26px; color:#ef6161;}
+.payment #footer {clear:both; font-size:13px;}
+.payment #footer li {background:none;}
+.payment #footer li input[type="checkbox"] {margin-top:3px; float:left;}
+.payment #footer li label {float:left;}
+#footer .link_area {float:right;}
+.payment #footer .link_area a {width:56px; height:23px; background-position:-481px 0;}
+.payment .form_area {padding-bottom:10px;}
+.payment .form_area input {float:left; }
+.payment .form_area input[type="checkbox"] {margin:11px 5px 0 0; }
+.payment .form_area input[type="text"] {padding:0 10px; width:286px; height:34px; line-height:32px; border:1px solid #d2d2d2;}
+.payment .form_area label {margin:8px 5px 0 0; float:left; font-size:13px;}
+#deposit .bank_area {padding-bottom:10px;}
+#deposit .inner p {margin-bottom:0;}
+#deposit .custom_select {margin-right:5px; float:left;}
+#deposit .result {padding-top:10px; float:left;}
+
+/* 결제방법 화살표 */
+/* .payment .speech_bubble#phone .ico{left:378px;}
+.payment .speech_bubble#deposit .ico{left:274px;}
+.payment .speech_bubble#transfer .ico{left:150px;} */
+
+	/* 현금영수증 부분 수정*/
+#deposit .cash_receipt_area > p{margin-bottom:0;color:#333333;}
+.cash_receipt{padding-bottom:10px;}
+.cash_receipt .custom_select{width:130px;margin-right:5px}
+.cash_receipt .custom_select .txt{background-position:106px 50%;}
+.cash_receipt label{margin:15px 10px 0 0; float:left; font-size:12px;}
+.cash_receipt input[type="text"]{padding: 0 10px;width:154px;height:42px;line-height: 32px;border: 1px solid #d2d2d2;}
+
+/* E : popup - 결제하기 */
+/* S : popup - 결제완료 */
+#wrap.payment_complete {width:700px;}
+.payment_complete .top_con {position:relative;}
+.payment_complete .top_con dt,
+.payment_complete .top_con dd {float:none;}
+.payment_complete .top_con dt {padding-bottom:5px;}
+.payment_complete .top_con dd {color:#666;}
+.payment_complete .top_con .group_dl {position:absolute; right:0; top:15px; color:#333;}
+.payment_complete .top_con .group_dl p {font-size:26px;}
+.payment_complete .middle_con {padding:0;}
+.payment_complete table {width:620px;}
+.payment_complete td {text-align:right;}
+.payment_complete .detail dt {margin:0; padding:0; width:325px; text-align:left; float:left;background:none;}
+.payment_complete .detail dd{float:right;}
+.payment_complete .btn_area {margin:28px auto 0 auto; width:440px; height:52px;}
+.payment_complete .btn_area .study_down{margin-right:20px;}
+.payment_complete .link_area a {width:56px; height:23px; background-position:-547px 0;}
+.payment_complete .payment_way {font-size:20px; }
+.payment_complete .payment_sum {color:#ef6161; font-size:20px;}
+.payment_complete .btn_sms{display:inline-block;width:81px;height:23px;margin-right:12px;background: url(../images/common/spr_btn.png) no-repeat -613px 0;
+    text-indent:-9999px;}
+/* E : popup - 결제완료 */
+
+/* S : popup - 보호자결제동의 */
+#wrap.guardian_agree {width:520px;}
+.guardian_agree .middle_con {padding:0;}
+.guardian_agree table {width:440px;}
+#pop .guardian_agree th {padding-top:24px; vertical-align:top; background-position: 0 32px;}
+.guardian_agree td {text-align:left;}
+.guardian_agree td input {padding:0 10px; width:288px; height:40px; line-height:38px; }
+.guardian_agree td span {margin-top:5px;}
+.guardian_agree .btn_area {width:140px;}
+.guardian_agree #footer li {background:none;}
+.guardian_agree .link_area a {width:56px; height:23px; background-position:-481px 0;}
+/* E : popup - 보호자결제동의 */
+
+/* S : popup - 결제 점검 */
+#wrap.check {width:700px;}
+.check .type_dot {padding-left:7px; background:url(../images/common/ico_dot_blue.gif) no-repeat left 7px;}
+.check .middle_con p {color:#666;}
+.check .apology {line-height:20px;}
+.check dd {margin:20px 0; height:68px; line-height:65px; background:#f5f5f5; text-align:center; font-weight:bold; font-size:16px;}
+.check .btn_area {width:210px;}
+/* E : popup - 결제 점검 */
+
+/* S : popup - 결제 에러 */
+#wrap.payment_check {width:700px;}
+.payment_check .desc {text-align:center; font-size:36px;}
+.payment_check .desc .ico {margin-right:5px; display:inline-block; width:56px; height:56px; background:url(../images/common/ico_error.png) no-repeat; vertical-align:middle;}
+.payment_check #container {padding-top:56px;}
+.payment_check .top_con {padding-bottom:50px;}
+.payment_check .middle_con {padding:0;}
+.payment_check table {width:100%;}
+#pop .payment_check table th {height:56px; background:#f0f0f0; background-image:none; border:0; text-align:center;}
+#pop .payment_check table td {padding-left:30px; height:56px; border:0; color:#666;}
+.payment_check .btn_area {width:210px;}
+/* E : popup - 결제 에러 */
+
+/* S : popup - 다운로드 동의 */
+.down_agree .middle_con dt {margin:0;padding:0 0 0 7px; float:none; width:auto; height:24px; background-position: left 7px; font-weight:bold; font-size:13px; }
+.down_agree .middle_con dd {margin:0; margin-left:5px; height:24px;font-size:13px; color:#666; }
+.down_agree .middle_con .clearFix dt {float:left; }
+.down_agree .middle_con .clearFix dd { float:left; }
+.down_agree .btn_area {width:140px;}
+.down_agree #footer li{padding-left:0;background:none;}
+/* E : popup - 다운로드 동의 */
+
+
+/* S : popup - 수강확인증 */
+#wrap.confirmation {width:800px;}
+#wrap.confirmation table{width:720px;border-top:2px solid #043264;color:#333333;font-size:12px;}
+#wrap.confirmation table th,#wrap.confirmation table td{height:40px;border:1px solid #cecece}
+#wrap.confirmation table th{padding-left:0;background-color:#f7f7f7;background-image:none;text-align:center;font-weight:normal;}
+#wrap.confirmation table td{padding-left:10px;}
+.ceo{position:relative}
+.ceo .stamp{position:absolute;right:8px;top:-10px;}
+#wrap.confirmation .student_info{padding:35px 0 12px 0;}
+.confirmation p{padding-bottom:25px;background:url(../images/common/logo_hanbiton.png) no-repeat 0 -10px;font-size:13px;text-align:right;}
+.confirmation .btn_wrap{text-align:center;}
+.confirmation .btn_wrap button{display:inline-block;width:110px;height:46px;}
+.confirmation .btn_wrap .btn.print{margin-right:10px;background-position:-703px -452px;}
+.confirmation .btn_wrap .btn.close{background-position:-835px -452px;}
+/* E : popup - 수강확인증 */
+
+
+.btn_popClose{position:absolute;right:40px;top:28px;width:26px;height:26px;background:url(../images/common/btn_close_pop.png) no-repeat 0 0;background-color:transparent;}
+
+
+
